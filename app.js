@@ -13,4 +13,10 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 
-console.log(`The area of a square with length 7 is ${area(7)}`);
+const width = 7;
+
+console.log(
+  `The area of a square with length ${width} is ${area(
+    width
+  )}. The perimeter is ${perimeter(width)}.`
+);
