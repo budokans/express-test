@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const hostname = "127.0.0.1";
 const port = 2073;
 const { area, perimeter } = require("./square.js");
 const wiki = require("./wiki.js");
@@ -11,7 +12,7 @@ app.get("/", (req, res) => {
 
 // Server setup on port defined above
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Server listening at http://${hostname}:${port}`);
 });
 
 // Use imported area and perimeter functions
